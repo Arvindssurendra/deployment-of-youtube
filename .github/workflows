@@ -2,7 +2,7 @@ name: Deploy to ACR and AKS
 
 on:
   push:
-    branches: [ main ]
+    branches: [ youtube-eks-deploy ]
 
 env:
   ACR_NAME: flaskapp1
