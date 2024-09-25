@@ -25,6 +25,7 @@ jobs:
 
     - name: Login to Azure Container Registry
       run: |
+        az ad sp create-for-rbac --name "my-github-actions" --role contributor --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} --sdk-auth
         az acr login --name $ACR_NAME
 
     - name: Build, tag, and push image to ACR
